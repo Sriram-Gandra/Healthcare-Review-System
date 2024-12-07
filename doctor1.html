@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="C:\Users\dell\OneDrive\Documents">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Shiva Kumar - Reviews</title>
+</head>
+<body>
+  <h1>Dr. Shiva Kumar - Reviews</h1>
+  <div id="reviews">
+    <!-- Existing reviews will be dynamically loaded here -->
+  </div>
+
+  <h2>Submit Your Review</h2>
+  <form id="reviewForm">
+    <label for="username">Your Name:</label><br>
+    <input type="text" id="username" name="username" required><br><br>
+
+    <label for="reviewText">Your Review:</label><br>
+    <textarea id="reviewText" name="reviewText" required></textarea><br><br>
+
+    <button type="submit">Submit Review</button>
+  </form>
+
+  <script>
+    // JavaScript to handle form submission
+    const form = document.getElementById("reviewForm");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      // Collect form data
+      const username = document.getElementById("username").value;
+      const reviewText = document.getElementById("reviewText").value;
+
+      // Send the data to the backend
+      try {
+        const response = await fetch("http://localhost:3000/api/reviews", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            doctor: "Dr. Shiva Kumar", // Replace with the doctor's name dynamically
+            username,
+            review: reviewText,
+          }),
+        });
+
+        if (response.ok) {
+          alert("Review submitted successfully!");
+          form.reset();
+        } else {
+          alert("Failed to submit review.");
+        }
+      } catch (error) {
+        console.error("Error submitting review:", error);
+      }
+    });
+  </script>
+</body>
+</html>

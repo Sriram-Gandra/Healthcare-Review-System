@@ -1,0 +1,120 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header Styles */
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Doctor List (Homepage) */
+.doctor-list {
+  list-style: none;
+  padding: 0;
+}
+
+.doctor-list li {
+  margin: 10px 0;
+}
+
+.doctor-list a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.doctor-list a:hover {
+  color: #0056b3;
+}
+
+/* Reviews Section */
+#reviews div {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #fefefe;
+}
+
+#reviews div strong {
+  font-size: 1.1em;
+  color: #007bff;
+}
+
+#reviews div p {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+#reviews div small {
+  display: block;
+  font-size: 0.8em;
+  color: #888;
+}
+
+/* Review Form */
+form {
+  margin-top: 20px;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  font-family: inherit;
+}
+
+form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+}
